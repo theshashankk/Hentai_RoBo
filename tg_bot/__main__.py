@@ -33,6 +33,7 @@ PM_START_TEXT = """
 ================================
 >> 𝐓𝐨 𝐬𝐞𝐞 𝐥𝐢𝐬𝐭 𝐨𝐟 𝐚𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐡𝐢𝐭 /help.
 ================================
+Ab or ky dekh rhe ho hentai dekh kr hilao 🤤
 
 """
 
@@ -47,7 +48,8 @@ Hello! my name *{}*.
  - ▪/settings:
    - ♡in PM: will send you your settings for all supported modules.
    - ♡in a group: will redirect you to pm, with all that chat's settings.
-
+*Special cmd: /abuse: to abuse some one.
+*owner: [The Shashank😎](t.me/TheShashank)
 
 
 {}
@@ -55,9 +57,9 @@ Hello! my name *{}*.
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
 
-MEIKO_IMG = "https://telegra.ph/file/48d2e685a74ffb2273397.jpg"
+MEIKO_IMG = "https://telegra.ph/file/4f3e6b92517012f5cea7f.jpg"
 
-DONATE_STRING = """No need to donate for hitomi"""
+DONATE_STRING = """No need to donate for Hentai 😜 only enjoy"""
 
 
 
@@ -148,9 +150,11 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup(
-         [[InlineKeyboardButton(text="Add Hitomi To Your Group", url="https://t.me/hitomi_robot?startgroup=new")],
-         [InlineKeyboardButton(text="Support Group 👥", url="https://t.me/Dark_cobra_support")],
+         [[InlineKeyboardButton(text="Add Hentai To Your Group", url="https://t.me/hentaii_robot?startgroup=new")],
+         [InlineKeyboardButton(text="Support Group 👥", url="https://t.me/Hentai_support")],
          [InlineKeyboardButton(text="Help And Commands ❔", callback_data="help_back")]])
+         [InlineKeyboardButton(text="Owner 😎", url="https://t.me/theshashank")],
+         [InlineKeyboardButton(text="Owner ki janemon 😍", url="https://t.me/cutie1145")],
             update.effective_message.reply_photo(MEIKO_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 parse_mode=ParseMode.MARKDOWN, reply_markup=buttons)
@@ -487,7 +491,7 @@ def donate(bot: Bot, update: Update):
         try:
             bot.send_message(user.id, DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
-            update.effective_message.reply_text("I've PM'ed you about donating to my creator!")
+            update.effective_message.reply_text("I've PM'ed you about donating to my creator👩.💻!")
         except Unauthorized:
             update.effective_message.reply_text("Contact me in PM first to get donation information.")
 
