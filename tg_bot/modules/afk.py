@@ -33,14 +33,14 @@ def no_longer_afk(bot: Bot, update: Update):
     res = sql.rm_afk(user.id)
     if res:
         options = [
-            '{} is here!',
-            '{} is back!',
-            '{} is now in the chat!',
-            '{} is awake!',
-            '{} is back online!',
-            '{} is finally here!',
-            'Welcome back!, {}',
-            'Where is {}?\nIn the chat!'
+            '{} is here!😎',
+            '{} is back!🤩',
+            '{} is now in the chat!😁',
+            '{} is awake!☺️',
+            '{} is back online!😊',
+            '{} is finally here!🤭',
+            'Welcome back!, {}'🤗,
+            'Where is {}?\nIn the chat!😉'
         ]
         chosen_option = random.choice(options)
         update.effective_message.reply_text(chosen_option.format(update.effective_user.first_name))
