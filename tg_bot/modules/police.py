@@ -18,7 +18,7 @@ EDIT_TIMES = 3
 
 police_siren = [
             "🔴🔴🔴⬜️⬜️⬜️🔵🔵🔵\n🔴🔴🔴⬜️⬜️⬜️🔵🔵🔵\n🔴🔴🔴⬜️⬜️⬜️🔵🔵🔵\n Hentai Police here",
-            "🔵🔵🔵⬜️⬜️⬜️🔴🔴🔴\n🔵🔵🔵⬜️⬜️⬜️🔴🔴🔴\n🔵🔵🔵⬜️⬜️⬜️🔴🔴🔴"
+            "🔵🔵🔵⬜️⬜️⬜️🔴🔴🔴\n🔵🔵🔵⬜️⬜️⬜️🔴🔴🔴\n🔵🔵🔵⬜️⬜️⬜️🔴🔴🔴\n 🚨🚨"
 ]
 
 
@@ -26,7 +26,7 @@ police_siren = [
 @user_admin
 @run_async
 def police(bot: Bot, update: Update):
-    msg = update.effective_message.reply_text('Police is coming!') 
+    msg = update.effective_message.reply_text('Hentai Police is coming!') 
     for x in range(EDIT_TIMES):
         msg.edit_text(police_siren[x%2])
         time.sleep(EDIT_SLEEP)
